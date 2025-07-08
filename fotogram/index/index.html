@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotogram</title>
+    <link rel="icon" type="x-icon" href="../img/favicon_fotogram.png">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="../Javascript/script.js"></script>
+</head>
+
+<body onload="displayImages()">
+
+    <header>
+        <img src="../img/logo_fotogram.svg" alt="logo">
+    </header>
+
+    <section class="wrapper">
+        <div class="margin">
+            <h1>Detailrausch <br> Makrofotografie im Fokus</h1>
+            <div id="albumDisplay" class="photo-album grow color">
+            </div>
+        </div>
+    </section>
+    <section>
+        <div onclick="toggleImageOverlay(index)" id="imageOverlay" class="image-overlay hidden">
+            <div class="image-viewer" id="imageViewer">
+                <div onclick="toggleImageOverlay()" class="image-viewer-header">
+                    <button id="imageViewerClose" class="image-viewer-close">
+                        <img class="close-icon" src="../img/close-24.png" alt="close">
+                    </button>
+                </div>
+                <div class="image-viewer-footer">
+                    <button onclick="navigatePreviousImage(1)" class="navigation-arrow-left"><img
+                            src="../img/left-arrow.png" alt=""></button>
+                    <span id="imageCounter">1/18</span>
+                    <button onclick="navigateNextImage(2)" class="navigation-arrow-right"><img
+                            src="../img/right-arrow.png" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>@Nico Merz</p>
+    </footer>
+</body>
+
+</html>
